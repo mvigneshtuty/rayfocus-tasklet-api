@@ -1,4 +1,4 @@
-package com.rayfocus.api.tasklet.model;
+package com.rayfocus.tasklet.api.model;
 
 import java.util.List;
 

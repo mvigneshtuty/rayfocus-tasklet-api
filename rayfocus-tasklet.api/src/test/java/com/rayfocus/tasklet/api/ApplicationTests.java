@@ -1,4 +1,4 @@
-package com.rayfocus.api.tasklet;
+package com.rayfocus.tasklet.api;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

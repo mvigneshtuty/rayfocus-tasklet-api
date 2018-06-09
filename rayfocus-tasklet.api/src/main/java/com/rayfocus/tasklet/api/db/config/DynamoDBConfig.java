@@ -1,4 +1,4 @@
-package com.rayfocus.api.tasklet.db.config;
+package com.rayfocus.tasklet.api.db.config;
 
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
 import org.springframework.beans.factory.annotation.Value;

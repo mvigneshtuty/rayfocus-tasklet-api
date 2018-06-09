@@ -1,4 +1,4 @@
-package com.rayfocus.api.tasklet.controller;
+package com.rayfocus.tasklet.api.controller;
 
 import java.util.List;
 
@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rayfocus.api.tasklet.db.repository.TaskRepository;
-import com.rayfocus.api.tasklet.http.HttpResponse;
-import com.rayfocus.api.tasklet.model.Task;
-import com.rayfocus.api.tasklet.model.TaskMetaData;
+import com.rayfocus.tasklet.api.db.repository.TaskRepository;
+import com.rayfocus.tasklet.api.http.HttpResponse;
+import com.rayfocus.tasklet.api.model.Task;
+import com.rayfocus.tasklet.api.model.TaskMetaData;
 
 @RestController
 @RequestMapping("/api/v1/tasklet")

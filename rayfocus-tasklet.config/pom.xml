@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.rayfocus.tasklet</groupId>
-	<artifactId>rayfocus-tasklet.api</artifactId>
+	<artifactId>rayfocus-tasklet.config</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>rayfocus-tasklet.api</name>
-	<description>Rayfocus Tasklet API</description>
+	<name>rayfocus-tasklet.config</name>
+	<description>Rayfocus Tasklet API Configuration</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -36,12 +36,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- DynamoDB -->
-		<dependency>
-			<groupId>com.github.derjust</groupId>
-			<artifactId>spring-data-dynamodb</artifactId>
-			<version>5.0.2</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -60,6 +54,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

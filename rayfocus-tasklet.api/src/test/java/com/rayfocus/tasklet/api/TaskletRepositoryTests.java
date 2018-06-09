@@ -1,4 +1,4 @@
-package com.rayfocus.api.tasklet;
+package com.rayfocus.tasklet.api;
 
 import static org.junit.Assert.assertTrue;
 
@@ -19,11 +19,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
-import com.rayfocus.api.tasklet.controller.TaskletController;
-import com.rayfocus.api.tasklet.http.HttpResponse;
-import com.rayfocus.api.tasklet.model.SubTask;
-import com.rayfocus.api.tasklet.model.Task;
-import com.rayfocus.api.tasklet.model.TaskMetaData;
+import com.rayfocus.tasklet.api.controller.TaskletController;
+import com.rayfocus.tasklet.api.http.HttpResponse;
+import com.rayfocus.tasklet.api.model.SubTask;
+import com.rayfocus.tasklet.api.model.Task;
+import com.rayfocus.tasklet.api.model.TaskMetaData;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
