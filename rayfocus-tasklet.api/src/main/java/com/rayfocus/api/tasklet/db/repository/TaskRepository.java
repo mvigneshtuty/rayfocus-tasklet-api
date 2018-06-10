@@ -1,11 +1,11 @@
-package com.rayfocus.tasklet.api.db.repository;
+package com.rayfocus.api.tasklet.db.repository;
 
 import java.util.List;
 
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;
 
-import com.rayfocus.tasklet.api.model.Task;
+import com.rayfocus.api.tasklet.model.Task;
 
 @EnableScan
 public interface TaskRepository extends CrudRepository<Task, String> {

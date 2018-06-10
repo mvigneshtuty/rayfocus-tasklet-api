@@ -1,31 +1,24 @@
-package com.rayfocus.tasklet.api.controller;
+package com.rayfocus.api.tasklet.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Component;
 
-import com.rayfocus.tasklet.api.db.repository.TaskRepository;
-import com.rayfocus.tasklet.api.http.HttpResponse;
-import com.rayfocus.tasklet.api.model.Task;
-import com.rayfocus.tasklet.api.model.TaskMetaData;
+import com.rayfocus.api.tasklet.db.repository.TaskRepository;
+import com.rayfocus.api.tasklet.http.HttpResponse;
+import com.rayfocus.api.tasklet.model.Task;
+import com.rayfocus.api.tasklet.model.TaskMetaData;
 
-@RestController
-@RequestMapping("/api/v1/tasklet")
-public class TaskletController {
+@Component
+public class TaskletService {
 
 	@Autowired
 	TaskRepository taskRepository;
 
-	@PostMapping("/task/create")
-	public ResponseEntity<HttpResponse> saveTask(@RequestBody Task newTask) {
+	public ResponseEntity<HttpResponse> saveTask(Task newTask) {
 		Task savedTask = taskRepository.save(newTask);
 
 		TaskMetaData taskMetaData = null;
@@ -39,11 +32,9 @@ public class TaskletController {
 		taskMetaData = new TaskMetaData(savedTask.getTaskId(), savedTask.getTaskName());
 		return new ResponseEntity<HttpResponse>(
 				new HttpResponse("200", "SUCCESS", "Task created successfully", taskMetaData), HttpStatus.OK);
-
 	}
-
-	@GetMapping("/task/read/{userId}")
-	public ResponseEntity<HttpResponse> getTasksByUserId(@PathVariable("userId") String userId) {
+	
+	public ResponseEntity<HttpResponse> getTaskByUserId(String userId){
 		List<Task> tasks = taskRepository.findByUserId(userId);
 		if (tasks == null) {
 			return new ResponseEntity<HttpResponse>(

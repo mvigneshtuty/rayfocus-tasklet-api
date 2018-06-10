@@ -1,4 +1,4 @@
-package com.rayfocus.tasklet.api.controller;
+package com.rayfocus.api.tasklet.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rayfocus.tasklet.api.model.SimpleTask;
+import com.rayfocus.api.tasklet.model.SimpleTask;
 
 @RestController
 public class SimpleTaskController {

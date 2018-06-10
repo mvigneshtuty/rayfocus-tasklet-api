@@ -1,4 +1,4 @@
-package com.rayfocus.tasklet.api.http;
+package com.rayfocus.api.tasklet.http;
 
 public class HttpResponse {
 	private final String statusCode;

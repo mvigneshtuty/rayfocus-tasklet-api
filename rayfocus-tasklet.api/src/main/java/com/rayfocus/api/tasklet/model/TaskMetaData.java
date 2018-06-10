@@ -1,4 +1,4 @@
-package com.rayfocus.tasklet.api.model;
+package com.rayfocus.api.tasklet.model;
 
 public class TaskMetaData {
 	private final String taskId;

@@ -1,4 +1,4 @@
-package com.rayfocus.tasklet.api.model;
+package com.rayfocus.api.tasklet.model;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;

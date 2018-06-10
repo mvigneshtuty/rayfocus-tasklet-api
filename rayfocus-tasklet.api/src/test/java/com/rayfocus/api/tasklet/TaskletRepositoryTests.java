@@ -1,4 +1,4 @@
-package com.rayfocus.tasklet.api;
+package com.rayfocus.api.tasklet;
 
 import static org.junit.Assert.assertTrue;
 
@@ -19,11 +19,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
-import com.rayfocus.tasklet.api.controller.TaskletController;
-import com.rayfocus.tasklet.api.http.HttpResponse;
-import com.rayfocus.tasklet.api.model.SubTask;
-import com.rayfocus.tasklet.api.model.Task;
-import com.rayfocus.tasklet.api.model.TaskMetaData;
+import com.rayfocus.api.tasklet.http.HttpResponse;
+import com.rayfocus.api.tasklet.model.SubTask;
+import com.rayfocus.api.tasklet.model.Task;
+import com.rayfocus.api.tasklet.model.TaskMetaData;
+import com.rayfocus.api.tasklet.service.TaskletService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
@@ -35,7 +35,7 @@ public final class TaskletRepositoryTests {
 	private AmazonDynamoDB amazonDynamoDB;
 
 	@Autowired
-	private TaskletController taskletController;
+	private TaskletService taskletService;
 
 	@Before
 	public void setUp() throws InterruptedException {
@@ -59,7 +59,7 @@ public final class TaskletRepositoryTests {
 				Arrays.asList(new SubTask("Vegetables", "INCOMPLETE"), new SubTask("Fruits", "COMPLETE")));
 		Task newTask = new Task("145", "Buy Groceries", "Active", subTasks, "VigneshM@taskletAPI.com", "02-JUN-18");
 
-		ResponseEntity<HttpResponse> response = taskletController.saveTask(newTask);
+		ResponseEntity<HttpResponse> response = taskletService.saveTask(newTask);
 		
 		assertTrue("Task saved successfully.", response.getBody().getStatusCode() == "200");
 		assertTrue("Task Id matches", ((TaskMetaData) response.getBody().getResponseData()).getTaskId() == "145");

@@ -1,4 +1,4 @@
-package com.rayfocus.tasklet;
+package com.rayfocus.api.tasklet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
