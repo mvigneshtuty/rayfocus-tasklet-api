@@ -1,0 +1,3 @@
+example.property: "PROD -> Tasklet Config"
+amazon.aws.accesskey: "AWS.PROD.ACCESSKEY"
+amazon.aws.secretkey: "AWS.PROD.SECRETKEY"

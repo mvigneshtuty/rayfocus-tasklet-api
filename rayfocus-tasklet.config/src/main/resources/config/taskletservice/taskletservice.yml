@@ -1,0 +1,3 @@
+example.property: "DEFAULT -> Tasklet Config"
+amazon.aws.accesskey: "AWS.DEFAULT.ACCESSKEY"
+amazon.aws.secretkey: "AWS.DEFAULT.SECRETKEY"
