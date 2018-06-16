@@ -2,32 +2,30 @@
 #   This is the core configuration for Tasklet Config Service
 #
 ####################################
-#server:
-#  port: 8888
-#spring:
-#  cloud:
-#    config:
-#      server:
-#        encrypt.enabled: false
-#        git:
-#          uri: https://github.com/carnellj/config-repo/
-#          searchPaths: licensingservice,organizationservice
-#          username: native-cloud-apps
-#          password: 0ffended
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        encrypt.enabled: false
+        git:
+          uri: https://github.com/mvigneshtuty/tasklet-config-repo/
+          searchPaths: taskletservice
 
 
 ####
 #Classpath and file-based solution
 ####
 
-server:
-   port: 8888
-spring:
-  profiles:
-    active: native
-  cloud:
-     config:
-       server:
-           native:
-              searchLocations: file:///D:/VICKY/github/rayfocus-tasklet-api/rayfocus-tasklet.config/src/main/resources/config/taskletservice
+#server:
+#   port: 8888
+#spring:
+#  profiles:
+#    active: native
+#  cloud:
+#     config:
+#       server:
+#           native:
+#              searchLocations: file:///D:/...path-to-config.../rayfocus-tasklet.config/src/main/resources/config/taskletservice
 ###              #searchLocations: classpath:config/,classpath:config/licensingservice

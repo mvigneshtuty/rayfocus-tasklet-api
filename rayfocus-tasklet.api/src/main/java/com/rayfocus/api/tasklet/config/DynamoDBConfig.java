@@ -1,7 +1,7 @@
-package com.rayfocus.api.tasklet.db.config;
+package com.rayfocus.api.tasklet.config;
 
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,11 +14,8 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 @EnableDynamoDBRepositories(basePackages = "com.rayfocus.api.tasklet.db.repository")
 public class DynamoDBConfig {
 
-	@Value("${amazon.aws.accesskey}")
-	private String awsAccessKey;
-
-	@Value("${amazon.aws.secretkey}")
-	private String awsSecretKey;
+	@Autowired
+	private ServiceConfig serviceConfig;
 
 	@Bean
 	public AmazonDynamoDB amazonDynamoDB(AWSCredentials awsCredentials) {
@@ -29,7 +26,8 @@ public class DynamoDBConfig {
 
 	@Bean
 	public AWSCredentials awsCredentials() {
-		return new BasicAWSCredentials(awsAccessKey, awsSecretKey);
+		return new BasicAWSCredentials(serviceConfig.getAwsAccessKey(), serviceConfig.getAwsSecretKey());
+		//return new BasicAWSCredentials(serviceConfig.getAwsAccessKey(), serviceConfig.getAwsSecretKey());
 	}
 
 }
