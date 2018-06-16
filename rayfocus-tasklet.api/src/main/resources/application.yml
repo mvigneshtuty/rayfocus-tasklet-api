@@ -1,0 +1,9 @@
+amazon:
+  aws:
+    accesskey: [AWS_ACCESS_KEY]
+    secretkey: [AWS_SECRET_KEY]
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
