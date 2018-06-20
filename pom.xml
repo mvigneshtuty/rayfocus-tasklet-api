@@ -7,7 +7,6 @@
   <artifactId>rayfocus-tasklet</artifactId>
   <packaging>pom</packaging>
 
-
   <name>rayfocus-tasklet</name>
   <description>Tasklet API from Rayfocus</description>
 
