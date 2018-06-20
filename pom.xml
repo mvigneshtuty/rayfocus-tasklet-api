@@ -18,6 +18,7 @@
   <modules>
     <module>rayfocus-tasklet.api</module>
 	<module>rayfocus-tasklet.config</module>
+	<module>rayfocus-tasklet.servicediscovery</module>
   </modules>
   <build>
     <plugins>
