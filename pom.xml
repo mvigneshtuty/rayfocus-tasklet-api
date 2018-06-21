@@ -18,7 +18,8 @@
   <modules>
     <module>rayfocus-tasklet.api</module>
 	<module>rayfocus-tasklet.config</module>
-	<module>rayfocus-tasklet.servicediscovery</module>
+	<module>rayfocus-tasklet.service-discovery</module>
+	<module>rayfocus-tasklet.reminder-service</module>
   </modules>
   <build>
     <plugins>
