@@ -47,6 +47,51 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<dependencies>
+		<!-- Netflix Eureka Client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Spring Cloud Config -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-client</artifactId>
+		</dependency>
+		
+		<!-- DynamoDB -->
+		<dependency>
+			<groupId>com.github.derjust</groupId>
+			<artifactId>spring-data-dynamodb</artifactId>
+			<version>5.0.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>15.0</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>

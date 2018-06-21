@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: tasklet.reminder-service
+  cloud:
+    config:
+      enabled: true
