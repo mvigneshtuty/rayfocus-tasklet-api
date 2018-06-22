@@ -1,6 +1,9 @@
 spring:
   application:
-    name: tasklet.reminder-service
+    name: tasklet-reminder-service
+  profiles:
+    active:
+      default
   cloud:
     config:
-      enabled: true
+      uri: http://localhost:8888

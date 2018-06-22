@@ -1,6 +1,6 @@
 spring:
   application:
-    name: taskletservice
+    name: tasklet-api-service
   profiles:
     active:
       default
