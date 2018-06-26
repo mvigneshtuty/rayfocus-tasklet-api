@@ -20,6 +20,7 @@
 	<module>rayfocus-tasklet.config</module>
 	<module>rayfocus-tasklet.service-discovery</module>
 	<module>rayfocus-tasklet.reminder-service</module>
+	<module>rayfocus-tasklet.auth-service</module>
   </modules>
   <build>
     <plugins>
