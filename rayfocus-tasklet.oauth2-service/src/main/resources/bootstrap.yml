@@ -1,0 +1,4 @@
+spring:
+  application:
+    name: tasklet-oauth2-server
+

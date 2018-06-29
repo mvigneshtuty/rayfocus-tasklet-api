@@ -5,12 +5,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.rayfocus.tasklet</groupId>
-	<artifactId>rayfocus-tasklet.auth-service</artifactId>
+	<artifactId>rayfocus-tasklet.oauth2-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>rayfocus-tasklet.auth-service</name>
-	<description>Rayfocus Tasklet Auth Service</description>
+	<name>rayfocus-tasklet.oauth2-service</name>
+	<description>Rayfocus Tasklet OAuth2 Service</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
