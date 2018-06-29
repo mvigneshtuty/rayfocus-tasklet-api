@@ -2,6 +2,7 @@ package com.rayfocus.api.tasklet.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,5 +32,10 @@ public class TaskletController {
 	public ResponseEntity<HttpResponse> getTasksByUserId(@PathVariable("userid") String userId,
 			@RequestParam(value = "version", required = false) String apiVersion) {
 		return taskletService.getTaskByUserId(userId);
+	}
+	
+	@DeleteMapping("/admin/task/truncate")
+	public ResponseEntity<HttpResponse> deleteAllTasks(@RequestParam(value = "version", required = false) String apiVersion) {
+		return taskletService.deleteAllTasks();
 	}
 }

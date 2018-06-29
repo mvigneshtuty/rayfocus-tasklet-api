@@ -33,8 +33,8 @@ public class TaskletService {
 		return new ResponseEntity<HttpResponse>(
 				new HttpResponse("200", "SUCCESS", "Task created successfully", taskMetaData), HttpStatus.OK);
 	}
-	
-	public ResponseEntity<HttpResponse> getTaskByUserId(String userId){
+
+	public ResponseEntity<HttpResponse> getTaskByUserId(String userId) {
 		List<Task> tasks = taskRepository.findByUserId(userId);
 		if (tasks == null) {
 			return new ResponseEntity<HttpResponse>(
@@ -43,5 +43,17 @@ public class TaskletService {
 		}
 		return new ResponseEntity<HttpResponse>(new HttpResponse("200", "SUCCESS", "Task Details", tasks),
 				HttpStatus.OK);
+	}
+
+	public ResponseEntity<HttpResponse> deleteAllTasks() {
+		try {
+			taskRepository.deleteAll();
+			return new ResponseEntity<HttpResponse>(
+					new HttpResponse("200", "SUCCESS", "All Tasks deleted successfully", null), HttpStatus.OK);
+		}
+		catch(Exception e) {
+			return new ResponseEntity<HttpResponse>(
+					new HttpResponse("500", "ERROR", "Error deleting all tasks", null), HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 	}
 }
