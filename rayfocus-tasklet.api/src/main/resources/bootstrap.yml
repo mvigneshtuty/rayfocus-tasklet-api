@@ -1,6 +1,6 @@
 spring:
   application:
-    name: tasklet-api-service
+    name: tasklet-api-service, tasklet-jwt-oauth2-server
   profiles:
     active:
       default
