@@ -1,5 +1,2 @@
-jwt:
-  signing:
-    key: 42sign556keyt5843
 server:
   port: 7500
