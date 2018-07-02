@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: tasklet-jwt-oauth2-server
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      uri: http://localhost:8888
+

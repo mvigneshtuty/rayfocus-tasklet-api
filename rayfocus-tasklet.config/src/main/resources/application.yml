@@ -11,7 +11,7 @@ spring:
         encrypt.enabled: false
         git:
           uri: https://github.com/mvigneshtuty/tasklet-config-repo/
-          searchPaths: tasklet-api-service,tasklet-reminder-service
+          searchPaths: tasklet-api-service,tasklet-reminder-service,tasklet-jwt-oauth2-server
 management:
   endpoints:
     web:
