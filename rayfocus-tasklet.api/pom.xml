@@ -93,6 +93,13 @@
 			<version>2.3.3.RELEASE</version>
 		</dependency>
 		
+		<!-- JWT -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-jwt</artifactId>
+			<version>1.0.9.RELEASE</version>
+		</dependency>
+		
 		<!-- Other dependencies -->
 		<dependency>
 			<groupId>javax.xml.bind</groupId>

@@ -14,6 +14,9 @@ public class ServiceConfig {
 
 	@Value("${amazon.aws.secretkey}")
 	private String awsSecretKey;
+	
+	@Value("${jwt.signing.key}")
+	private String jwtSigningKey;
 
 	public String getEnvProfileValue() {
 		return envProfileValue;
@@ -25,6 +28,10 @@ public class ServiceConfig {
 
 	public String getAwsSecretKey() {
 		return awsSecretKey;
+	}
+	
+	public String getJwtSigningKey() {
+		return jwtSigningKey;
 	}
 
 }
